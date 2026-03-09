@@ -28,6 +28,11 @@
     font-family: var(--font-base);
   }
 
+  button {
+    font-family: var(--font-base);
+    font-weight: 400;
+  }
+
   body {
     background: var(--color-bg);
     color: var(--color-text);

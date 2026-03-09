@@ -1,8 +1,9 @@
+import Button from "@/components/ui/Button";
+
 export default function Home() {
     return (
         <div>
-            <h1>teste de titulo</h1>
-            <p>teste de titulo</p>
+            <Button size="sm">Botao de teste</Button>
         </div>
     );
 }
