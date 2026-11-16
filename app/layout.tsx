@@ -1,30 +1,11 @@
-"use client";
+import type { Metadata } from "next";
+import "./globals.css";
 
-import "@/app/globals.css";
-import { Barlow, Geom } from "next/font/google";
+export const metadata: Metadata = {
+  title: "Mare Nostrum — A taste of Brazil's Northeast",
+  description: "A restaurant concept celebrating the flavors, warmth and generous spirit of Brazil's Northeast.",
+};
 
-const barlow = Barlow({
-    display: "swap",
-    variable: "--font-title",
-    subsets: ["latin"],
-    weight: ["100", "300"],
-});
-
-const geom = Geom({
-    display: "swap",
-    variable: "--font-base",
-    subsets: ["latin"],
-    weight: ["300", "500"],
-});
-
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
-    return (
-        <html lang="en" className={`${barlow.variable} ${geom.variable}`}>
-            <body className="h-full bg-background">{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body>{children}</body></html>;
 }

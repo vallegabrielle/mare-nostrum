@@ -2,8 +2,8 @@ export interface HotDeal {
     id: string;
     title: string;
     description: string;
-    badge: string; // Ex: "Limited Time", "Every Tuesday"
-    discount?: string; // Ex: "20% OFF", "BOGO"
+    badge: string;
+    discount?: string;
     validUntil?: string;
     imageUrl: string;
     ctaText: string;

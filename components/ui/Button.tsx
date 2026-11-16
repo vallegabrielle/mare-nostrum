@@ -5,7 +5,7 @@ import React from "react";
 const buttonVariants = cva(
     [
         "cursor-pointer",
-        "border border-foreground border-3",
+        "border border-foreground border-1 rounded-md",
         "active:shadow-[-6px_6px_0px_0px_var(--color-foreground)]",
         "disabled:opacity-50 disabled:pointer-events-none",
         "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-foreground focus-visible:ring-offset-1",
@@ -15,14 +15,14 @@ const buttonVariants = cva(
         variants: {
             variant: {
                 primary:
-                    "bg-accent text-surface hover:text-background hover:bg-foreground",
+                    "bg-accent text-foreground hover:text-background hover:bg-pistaccio",
                 secondary:
-                    "bg-surface text-foreground hover:bg-accent-hover hover:text-background",
+                    "bg-white text-foreground hover:bg-accent-hover hover:text-white",
             },
             size: {
-                sm: "px-4 py-1 text-sm rounded-md",
-                md: "px-6 py-1 text-lg rounded-lg",
-                lg: "px-7 py-2 text-xl rounded-lg",
+                sm: "px-4 py-1 text-sm",
+                md: "px-6 py-1 text-lg",
+                lg: "px-7 py-1 text-xl",
             },
         },
         defaultVariants: {
@@ -39,7 +39,7 @@ interface ButtonProps
     isLoading?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     (
         { children, className, variant, size, isLoading, disabled, ...props },
         ref,
@@ -65,5 +65,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-
-export default Button;
