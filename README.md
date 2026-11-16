@@ -35,4 +35,4 @@ npm run build
 npm run lint
 ```
 
-The page lives in `app/page.tsx`, with its styles in `app/globals.css` and images in `public/assets/`.
+The page is assembled in `app/page.tsx` from the sections in `components/`. Menu content lives in `data/menu.ts`, styles in `app/globals.css`, and images in `public/assets/`.
